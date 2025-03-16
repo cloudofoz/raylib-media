@@ -23,6 +23,10 @@ endif()
 option(RMEDIA_BUILD_SHARED "Build raymedia as a shared library" OFF)
 option(RMEDIA_BUILD_EXAMPLES "Build the examples" ${RMEDIA_IS_MAIN})
 
+
+SET(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/CMakeModules/")
+FIND_PACKAGE(FFMPEG REQUIRED)
+
 # Include standard cmake scripts
 
 include(CheckLibraryExists)
